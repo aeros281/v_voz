@@ -28,7 +28,9 @@ class _MainLayoutState extends State<MainLayout> {
                 setState(() {});
               } else {
                 Navigator.push(context, MaterialPageRoute(builder: ((context) {
-                  return ThreadWidget(value);
+                  return Scaffold(
+                      appBar: AppBar(title: const Text('Thread')),
+                      body: ThreadWidget(value));
                 })));
               }
             })),
