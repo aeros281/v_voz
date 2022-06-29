@@ -1,3 +1,6 @@
+import 'package:f_voz/home/widgets/main_layout.dart';
+import 'package:f_voz/home/widgets/thread.dart';
+import 'package:f_voz/shared/widgets/list_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -5,14 +8,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text('Home')),
-        body: Center(
-          child: ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/about');
-              },
-              child: const Text('Go to about!')),
-        ));
+    return MainLayout();
   }
 }
