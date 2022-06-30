@@ -5,11 +5,18 @@ import '../state/forum_list.dart';
 import '../state/thread.dart';
 
 class ThreadWidget extends StatelessWidget {
-  const ThreadWidget({Key? key}) : super(key: key);
+  final Widget drawer;
+  final num mobileBreakpoint;
+
+  const ThreadWidget(
+      {Key? key, required this.drawer, required this.mobileBreakpoint})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final bool isMobile = MediaQuery.of(context).size.width <= mobileBreakpoint;
     return Scaffold(
+      drawer: isMobile ? Drawer(child: drawer) : null,
       appBar: AppBar(
         title: const Text('Thread'),
       ),

@@ -19,12 +19,17 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return TwoPane(
       startPane: const ForumList(),
-      endPane: const ThreadWidget(),
+      endPane: const ThreadWidget(
+        drawer: ForumList(
+          asDrawer: true,
+        ),
+        mobileBreakpoint: PHONE_SCREEN_WIDTH_BREAKPOINT,
+      ),
       paneProportion: 0.3,
       panePriority:
           MediaQuery.of(context).size.width > PHONE_SCREEN_WIDTH_BREAKPOINT
               ? TwoPanePriority.both
-              : TwoPanePriority.start,
+              : TwoPanePriority.end,
     );
   }
 }
