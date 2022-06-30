@@ -18,9 +18,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return TwoPane(
-      startPane: const ForumList(),
+      startPane: const ForumListWidget(),
       endPane: const ThreadWidget(
-        drawer: ForumList(
+        drawer: ForumListWidget(
           asDrawer: true,
         ),
         mobileBreakpoint: PHONE_SCREEN_WIDTH_BREAKPOINT,

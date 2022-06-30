@@ -6,9 +6,9 @@ import '../state/thread.dart';
 
 typedef ItemSelectedCallback = void Function(int value);
 
-class ForumList extends StatelessWidget {
+class ForumListWidget extends StatelessWidget {
   final bool asDrawer;
-  const ForumList({Key? key, this.asDrawer = false}) : super(key: key);
+  const ForumListWidget({Key? key, this.asDrawer = false}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
