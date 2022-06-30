@@ -24,7 +24,7 @@ class VozApp extends StatelessWidget {
 
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
-        '/': (context) => const HomePage(),
+        '/': (context) => HomePage(),
         '/about': (context) => const AboutPage(),
       },
       debugShowCheckedModeBanner: false,
