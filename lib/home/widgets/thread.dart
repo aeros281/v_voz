@@ -4,16 +4,9 @@ import 'package:provider/provider.dart';
 import '../state/forum_list.dart';
 import '../state/thread.dart';
 
-class ThreadWidget extends StatefulWidget {
-  final int data;
+class ThreadWidget extends StatelessWidget {
+  const ThreadWidget({Key? key}) : super(key: key);
 
-  const ThreadWidget(this.data, {super.key});
-
-  @override
-  State<ThreadWidget> createState() => _ThreadWidgetState();
-}
-
-class _ThreadWidgetState extends State<ThreadWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,8 +1,11 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:f_voz/home/screens/about.dart';
 import 'package:f_voz/home/screens/home.dart';
+import 'package:f_voz/home/state/forum_list.dart';
+import 'package:f_voz/home/state/thread.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 const preview = true;
 
@@ -16,18 +19,28 @@ class VozApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      // Device Preview
-      useInheritedMediaQuery: true,
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ThreadState(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ForumListState(),
+        ),
+      ],
+      child: MaterialApp(
+        // Device Preview
+        useInheritedMediaQuery: true,
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
 
-      initialRoute: '/',
-      routes: <String, WidgetBuilder>{
-        '/': (context) => HomePage(),
-        '/about': (context) => const AboutPage(),
-      },
-      debugShowCheckedModeBanner: false,
+        initialRoute: '/',
+        routes: <String, WidgetBuilder>{
+          '/': (context) => HomePage(),
+          '/about': (context) => const AboutPage(),
+        },
+        debugShowCheckedModeBanner: false,
+      ),
     );
   }
 }
