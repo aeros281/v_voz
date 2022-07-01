@@ -33,12 +33,6 @@ class ThreadWidget extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: ElevatedButton(
-          onPressed: () {
-            Provider.of<ForumListState>(context, listen: false)
-                .add(const Forum(2, 'Something'));
-          },
-          child: const Text('Click!')),
     );
   }
 }

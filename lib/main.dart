@@ -39,6 +39,7 @@ class VozApp extends StatelessWidget {
           '/': (context) => HomePage(),
           '/about': (context) => const AboutPage(),
         },
+
         debugShowCheckedModeBanner: false,
       ),
     );

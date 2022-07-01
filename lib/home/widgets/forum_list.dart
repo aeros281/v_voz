@@ -14,35 +14,64 @@ class ForumListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<ForumListState>(
       builder: (context, value, child) {
-        return Container(
-          color: Colors.white,
+        return Material(
           child: ListView.builder(
-              itemCount: value.threads.length,
+              itemCount: value.forums.length,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    child: InkWell(
-                      onTap: () {
-                        var threadId = value.threads[index].threadId;
-                        Provider.of<ThreadState>(context, listen: false)
-                            .setSelectedThreadById(threadId);
-                        if (asDrawer) {
-                          Navigator.pop(context);
-                        }
-                      },
-                      child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Text(
-                            value.threads[index].text.toString(),
-                            style: const TextStyle(fontSize: 22.0),
-                          )),
-                    ),
-                  ),
+                return ForumGroupWidget(
+                  asDrawer: asDrawer,
+                  forumGroup: value.forums[index],
                 );
               }),
         );
       },
+    );
+  }
+}
+
+class ForumGroupWidget extends StatelessWidget {
+  final bool asDrawer;
+  final ForumGroup forumGroup;
+  const ForumGroupWidget({
+    Key? key,
+    required this.asDrawer,
+    required this.forumGroup,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            forumGroup.name,
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          const Divider(),
+          ListView.builder(
+            itemCount: forumGroup.forums.length,
+            itemBuilder: (context, index) {
+              return InkWell(
+                onTap: () {
+                  var threadId = forumGroup.forums[index].threadId;
+                  Provider.of<ThreadState>(context, listen: false)
+                      .setSelectedThreadById(threadId);
+                  if (asDrawer) {
+                    Navigator.pop(context);
+                  }
+                },
+                child: Text(
+                  forumGroup.forums[index].text,
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+              );
+            },
+            shrinkWrap: true,
+          ),
+        ],
+      ),
     );
   }
 }

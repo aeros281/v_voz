@@ -1,0 +1,235 @@
+{
+    "forumData": [
+        {
+            "name": "Đại sảnh",
+            "forums": [
+                {
+                    "text": "Thông báo",
+                    "id": 2
+                },
+                {
+                    "text": "Góp ý",
+                    "id": 3
+                },
+                {
+                    "text": "Tin tức iNet",
+                    "id": 102
+                },
+                {
+                    "text": "Review sản phẩm",
+                    "id": 103
+                },
+                {
+                    "text": "Chia sẻ kiến thức",
+                    "id": 104
+                }
+            ]
+        },
+        {
+            "name": "Máy tính",
+            "forums": [
+                {
+                    "text": "Tư vấn cấu hình",
+                    "id": 70
+                },
+                {
+                    "text": "Overclocking & Cooling & Modding",
+                    "id": 6
+                },
+                {
+                    "text": "AMD",
+                    "id": 25
+                },
+                {
+                    "text": "Intel",
+                    "id": 24
+                },
+                {
+                    "text": "GPU & Màn hình",
+                    "id": 8
+                },
+                {
+                    "text": "Phần cứng chung",
+                    "id": 9
+                },
+                {
+                    "text": "Thiết bị ngoại vi & Phụ kiện & Mạng",
+                    "id": 30
+                },
+                {
+                    "text": "Server / NAS / Render Farm",
+                    "id": 83
+                },
+                {
+                    "text": "Small Form Factor PC",
+                    "id": 61
+                },
+                {
+                    "text": "Hackintosh",
+                    "id": 62
+                },
+                {
+                    "text": "Máy tính xách tay",
+                    "id": 47
+                }
+            ]
+        },
+        {
+            "name": "Phần mềm & Games",
+            "forums": [
+                {
+                    "text": "Phần mềm",
+                    "id": 13
+                },
+                {
+                    "text": "App di động",
+                    "id": 21
+                },
+                {
+                    "text": "PC Gaming",
+                    "id": 11
+                },
+                {
+                    "text": "Console Gaming",
+                    "id": 22
+                }
+            ]
+        },
+        {
+            "name": "Sản phẩm công nghệ",
+            "forums": [
+                {
+                    "text": "Android",
+                    "id": 32
+                },
+                {
+                    "text": "Apple",
+                    "id": 36
+                },
+                {
+                    "text": "Multimedia",
+                    "id": 31
+                },
+                {
+                    "text": "Đồ điện tử & Thiết bị gia dụng",
+                    "id": 10
+                },
+                {
+                    "text": "Chụp ảnh & Quay phim",
+                    "id": 75
+                },
+                {
+                    "text": "Góc chiến lược",
+                    "id": 101
+                }
+            ]
+        },
+        {
+            "name": "Học tập & Sự nghiệp",
+            "forums": [
+                {
+                    "text": "Ngoại ngữ",
+                    "id": 90
+                },
+                {
+                    "text": "Lập trình / CNTT",
+                    "id": 91
+                },
+                {
+                    "text": "Kinh tế / Luật",
+                    "id": 92
+                },
+                {
+                    "text": "Make Money Online",
+                    "id": 93
+                },
+                {
+                    "text": "Tiền điện tử",
+                    "id": 94
+                }
+            ]
+        },
+        {
+            "name": "Khu vui chơi giải trí",
+            "forums": [
+                {
+                    "text": "Chuyện trò linh tinh™",
+                    "id": 17
+                },
+                {
+                    "text": "Điểm báo",
+                    "id": 33
+                },
+                {
+                    "text": "4 bánh",
+                    "id": 38
+                },
+                {
+                    "text": "2 bánh",
+                    "id": 39
+                },
+                {
+                    "text": "Thể dục thể thao",
+                    "id": 63
+                },
+                {
+                    "text": "Ẩm thực & Du lịch",
+                    "id": 64
+                },
+                {
+                    "text": "Phim / Nhạc / Sách",
+                    "id": 65
+                },
+                {
+                    "text": "Thời trang & Làm đẹp",
+                    "id": 66
+                },
+                {
+                    "text": "Các thú chơi khác",
+                    "id": 67
+                }
+            ]
+        },
+        {
+            "name": "Khu thương mại",
+            "forums": [
+                {
+                    "text": "Máy tính để bàn",
+                    "id": 68
+                },
+                {
+                    "text": "Máy tính xách tay",
+                    "id": 72
+                },
+                {
+                    "text": "Điện thoại di động",
+                    "id": 76
+                },
+                {
+                    "text": "Xe các loại",
+                    "id": 77
+                },
+                {
+                    "text": "Thời trang & Làm đẹp",
+                    "id": 78
+                },
+                {
+                    "text": "Bất động sản",
+                    "id": 79
+                },
+                {
+                    "text": "Ăn uống & Du lịch",
+                    "id": 81
+                },
+                {
+                    "text": "SIM số & Đồ phong thuỷ",
+                    "id": 82
+                },
+                {
+                    "text": "Sản phẩm & Dịch vụ khác",
+                    "id": 80
+                }
+            ]
+        }
+    ]
+}
