@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../state/forum_list.dart';
 import '../state/thread.dart';
 
 class ThreadWidget extends StatelessWidget {

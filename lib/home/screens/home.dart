@@ -2,7 +2,7 @@ import 'package:dual_screen/dual_screen.dart';
 import 'package:f_voz/shared/constants.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/forum_list.dart';
+import '../widgets/left_panel.dart';
 import '../widgets/thread.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,9 +22,9 @@ class _HomePageState extends State<HomePage> {
         final double proportion =
             orientation == Orientation.landscape ? 0.4 : 0.3;
         return TwoPane(
-          startPane: const ForumListWidget(),
+          startPane: const LeftPanelWidget(),
           endPane: const ThreadWidget(
-            drawer: ForumListWidget(
+            drawer: LeftPanelWidget(
               asDrawer: true,
             ),
             mobileBreakpoint: PHONE_SCREEN_WIDTH_BREAKPOINT,
