@@ -17,19 +17,25 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return TwoPane(
-      startPane: const ForumListWidget(),
-      endPane: const ThreadWidget(
-        drawer: ForumListWidget(
-          asDrawer: true,
-        ),
-        mobileBreakpoint: PHONE_SCREEN_WIDTH_BREAKPOINT,
-      ),
-      paneProportion: 0.3,
-      panePriority:
-          MediaQuery.of(context).size.width > PHONE_SCREEN_WIDTH_BREAKPOINT
-              ? TwoPanePriority.both
-              : TwoPanePriority.end,
+    return OrientationBuilder(
+      builder: (context, orientation) {
+        final double proportion =
+            orientation == Orientation.landscape ? 0.4 : 0.3;
+        return TwoPane(
+          startPane: const ForumListWidget(),
+          endPane: const ThreadWidget(
+            drawer: ForumListWidget(
+              asDrawer: true,
+            ),
+            mobileBreakpoint: PHONE_SCREEN_WIDTH_BREAKPOINT,
+          ),
+          paneProportion: proportion,
+          panePriority:
+              MediaQuery.of(context).size.width > PHONE_SCREEN_WIDTH_BREAKPOINT
+                  ? TwoPanePriority.both
+                  : TwoPanePriority.end,
+        );
+      },
     );
   }
 }
